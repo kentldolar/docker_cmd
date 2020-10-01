@@ -41,3 +41,28 @@ https://github.com/docker/compose/issues/3904
 
 #docker delete all images
 docker system prune -a --volumes
+
+#docker nginx "413 Entiy too large"
+https://qiita.com/takecian/items/639deeae094466de6546
+client_max_body_size 20M;
+
+#docker nginx 504 Gateway Time-out
+
+
+
+#docker mysql "Incorrect format parameterエラー"
+https://hara-chan.com/it/programming/incorrect-format-parameter-phpmyadmin/
+https://techfree.jp/3147
+
+#docker-compose.yml
+volumes:
+    - ./phpmyadmin-misc.ini:/usr/local/etc/php/conf.d/phpmyadmin-misc.ini
+
+#phpmyadmin-misc.ini
+allow_url_fopen = Off
+max_execution_time = 600
+memory_limit = 64M
+post_max_size = 64M
+upload_max_filesize = 64M
+
+#End
